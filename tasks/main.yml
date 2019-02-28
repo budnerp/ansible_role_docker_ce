@@ -14,5 +14,23 @@
       name: docker
       state: started
 
+  - name: DOCKER CE - add docker user group
+    group:
+      name: docker
+      state: present
+    register: group_result
+
+  - name: DOCKER CE - add vagrant user to docker group
+    user:
+      name: vagrant
+      shell: /bin/bash
+      groups: docker
+      append: yes
+    register: user_group_result
+
+#  - debug:
+#      var: group_result
+#  - debug:
+#      var: user_group_result
 #  - debug:
 #      var: docker_result
