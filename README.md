@@ -1,5 +1,5 @@
 # Ansible role for Docker CE
-Ansible role for Docker CE
+Ansible role for Docker CE for CentOS 7
 
 ## What's inside?
 1. Interesting Docker CE dirs and files: 
