@@ -6,9 +6,10 @@ Ansible role for Docker CE
     ```
     ...
     ```
-2. Custom settings as per defaults/main.yml
+2. `vagrant` user is added to `docker` group allowing him to operate with docker without sudo
    
 ## Tested on
+docker-ce 17.03.2-ce, build f5ec1e2
 
 ## Installation
 1. Navigate to Ansible's roles folder
@@ -25,10 +26,12 @@ Ansible role for Docker CE
     ```
 
 ## Other links
-- 
+- Get Docker CE for CentOS [https://docs.docker.com/install/linux/docker-ce/centos/]()
+- Getting started [https://docs.docker.com/get-started/]()
 
 ## TO DO
 -[ ] add dependencies 
+-[ ] The overlay2 storage driver is recommended (`overlay` is used right after installation)
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
